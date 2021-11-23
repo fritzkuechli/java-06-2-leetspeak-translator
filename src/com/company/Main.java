@@ -10,7 +10,7 @@ public class Main {
         Scanner inp = new Scanner(System.in);
         char[] inputTextChar;
         System.out.println("Please input your Text: ");
-        inputTextChar = inp.nextLine().toCharArray();
+        inputTextChar = inp.nextLine().toUpperCase().toCharArray();
 
         for (char c : inputTextChar) {
             char outputChar = switch (c) {
@@ -24,6 +24,7 @@ public class Main {
                 case 'O' -> '0';
                 case 'S' -> '$';
                 case 'T' -> '7';
+                case 'Z' -> '2';
             default -> c;
             };
             System.out.print(outputChar);
